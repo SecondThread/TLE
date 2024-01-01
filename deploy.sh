@@ -1,0 +1,16 @@
+echo Getting credentials for docker...
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 478320471122.dkr.ecr.us-east-2.amazonaws.com
+
+echo Building with buildx assuming apple silicon...
+docker buildx build --platform linux/amd64 -t tle .
+
+echo Tagging...
+docker tag tle 478320471122.dkr.ecr.us-east-2.amazonaws.com/secondthreadapi:latestTLE
+
+echo Pushing to AWS...
+docker push 478320471122.dkr.ecr.us-east-2.amazonaws.com/secondthreadapi:latestTLE
+
+echo Trying to reset AWS stuff...
+aws ecs update-service --force-new-deployment --service arn:aws:ecs:us-east-2:478320471122:service/TLEBot/tle_service --cluster arn:aws:ecs:us-east-2:478320471122:cluster/TLEBot > deployServerOutput.txt
+
+echo View deploy status: https://us-east-2.console.aws.amazon.com/ecs/v2/clusters/TLEBot/tasks?region=us-east-2

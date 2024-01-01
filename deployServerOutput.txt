@@ -1,0 +1,171 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-2:478320471122:service/TLEBot/tle_service",
+        "serviceName": "tle_service",
+        "clusterArn": "arn:aws:ecs:us-east-2:478320471122:cluster/TLEBot",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 2,
+        "pendingCount": 0,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-2:478320471122:task-definition/tle_bot_task_definition:1",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": true,
+                "rollback": true
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 100
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/4176481366914774267",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-2:478320471122:task-definition/tle_bot_task_definition:1",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2024-01-01T13:45:18.311000-08:00",
+                "updatedAt": "2024-01-01T13:45:18.311000-08:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0a872b9110931413c",
+                            "subnet-03221cfcfb02f6196",
+                            "subnet-0d5b4d712aa79d914"
+                        ],
+                        "securityGroups": [
+                            "sg-03619f0862f7a349f"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/4176481366914774267 in progress."
+            },
+            {
+                "id": "ecs-svc/7820677386314288616",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-2:478320471122:task-definition/tle_bot_task_definition:1",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2024-01-01T13:43:41.837000-08:00",
+                "updatedAt": "2024-01-01T13:44:57.152000-08:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0a872b9110931413c",
+                            "subnet-03221cfcfb02f6196",
+                            "subnet-0d5b4d712aa79d914"
+                        ],
+                        "securityGroups": [
+                            "sg-03619f0862f7a349f"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/7820677386314288616 in progress."
+            },
+            {
+                "id": "ecs-svc/2805879249253045968",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-2:478320471122:task-definition/tle_bot_task_definition:1",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 1,
+                "failedTasks": 0,
+                "createdAt": "2024-01-01T13:23:37.973000-08:00",
+                "updatedAt": "2024-01-01T13:44:57.697000-08:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0a872b9110931413c",
+                            "subnet-03221cfcfb02f6196",
+                            "subnet-0d5b4d712aa79d914"
+                        ],
+                        "securityGroups": [
+                            "sg-03619f0862f7a349f"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "COMPLETED",
+                "rolloutStateReason": "ECS deployment ecs-svc/2805879249253045968 completed."
+            }
+        ],
+        "roleArn": "arn:aws:iam::478320471122:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "0792f6a9-cdaf-4bce-8647-696a2ece5599",
+                "createdAt": "2024-01-01T13:44:07.679000-08:00",
+                "message": "(service tle_service) has started 1 tasks: (task c0bbcdaee1b64c6baa7883c23dbcc1b1)."
+            },
+            {
+                "id": "14725a13-cf4f-4b2e-aecb-6e9fef2b16f0",
+                "createdAt": "2024-01-01T13:43:57.047000-08:00",
+                "message": "(service tle_service) stopped 1 pending tasks."
+            },
+            {
+                "id": "d190096c-757e-4629-bc8a-ff8ae9c0a587",
+                "createdAt": "2024-01-01T13:43:37.303000-08:00",
+                "message": "(service tle_service) has started 1 tasks: (task f2be355ca42c43bd951c92116a1d1b74)."
+            },
+            {
+                "id": "179ed268-ae57-4e8c-bf5e-2fb9e8e1803e",
+                "createdAt": "2024-01-01T13:26:32.848000-08:00",
+                "message": "(service tle_service) has reached a steady state."
+            },
+            {
+                "id": "8e92c48b-ac64-4684-aa85-e47e7d8cf368",
+                "createdAt": "2024-01-01T13:26:32.847000-08:00",
+                "message": "(service tle_service) (deployment ecs-svc/2805879249253045968) deployment completed."
+            },
+            {
+                "id": "4ad12c9f-ab00-4723-975d-48120779834e",
+                "createdAt": "2024-01-01T13:23:42.657000-08:00",
+                "message": "(service tle_service) has started 1 tasks: (task 569da3db20934796a65216870d43de15)."
+            }
+        ],
+        "createdAt": "2024-01-01T13:23:37.973000-08:00",
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-0a872b9110931413c",
+                    "subnet-03221cfcfb02f6196",
+                    "subnet-0d5b4d712aa79d914"
+                ],
+                "securityGroups": [
+                    "sg-03619f0862f7a349f"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::478320471122:root",
+        "enableECSManagedTags": true,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false
+    }
+}
